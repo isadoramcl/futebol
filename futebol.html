@@ -1,0 +1,33 @@
+<meta charset = "UTF = 8">
+
+<script>
+
+function pulaLinha (){
+	document.write ("<br>");
+	document.write ("<br>");
+}
+
+function exibe (frase){
+	document.write (frase);
+	pulaLinha ();
+}
+
+var vitorias = parseInt (prompt ("Quantos jogos seu time ganhou?")); //java salva prompt como TEXTO
+var empates = parseInt (prompt ("Em quantos jogos seu time empatou")); //parseInt transforma string em número
+var pontos = vitorias * 3 + empates;
+exibe ("Seu time possui " + pontos + " pontos."); //sem o parseInt, o resultado seria uma concatenação de string
+
+if (pontos < 28){
+	exibe ("Seu time foi pior que no ano passado.");
+}
+
+if (pontos > 28){
+	exibe ("Seu time foi melhor esse ano.");
+}
+
+if (pontos == 28){
+	exibe ("Seu time fez a mesma quantidade de pontos que no ano passado.");
+}
+
+
+</script>	
